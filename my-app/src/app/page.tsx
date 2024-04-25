@@ -14,8 +14,8 @@ export default function Home() {
   return (
     <div className='flex flex-col items-center w-full'>
       <Navbar />
-      <div className='flex flex-col w-full h-[70vh] md:h-[100vh] px-4 md:px-12'>
-        <div className='w-full relative h-full top-[100px] bg-[#1e1e20] rounded-lg flex items-center'>
+      <div className='flex flex-col w-full h-[70vh] md:h-[100vh] md:px-12'>
+        <div className='w-full relative h-full top-[100px] bg-[#1e1e20] md:rounded-lg flex items-center'>
           <Main />
           <Image 
             src={containerImage}
@@ -24,7 +24,7 @@ export default function Home() {
             sizes="(min-width: 780px) calc(100vw - 96px), calc(100vw - 32px)"
             style={{ objectFit: "cover"}}
             quality={100}
-            className='rounded-lg opacity-50 blur-sm'
+            className='md:rounded-lg opacity-50 blur-sm'
           />
         </div>      
       </div>

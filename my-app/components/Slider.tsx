@@ -89,7 +89,7 @@ export default function Slider() {
                   fill
                   sizes="100vw"
                   style={{ objectFit: "cover"}}
-                  className='rounded-2xl'
+                  className='md:rounded-2xl'
                 />
               </div>
               ) : (
@@ -100,7 +100,7 @@ export default function Slider() {
                   sizes="100vw"
                   fill
                   style={{ objectFit: "cover"}}
-                  className='rounded-2xl'
+                  className='md:rounded-2xl'
                 />
               </div>
               )}

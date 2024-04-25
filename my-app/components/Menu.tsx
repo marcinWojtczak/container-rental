@@ -30,7 +30,7 @@ const menu = [
 export default function Menu({ handleMenu, menuToggle, navStyle }: menuProps) {
   return (
     <>
-      <div className={`fixed inset-0 lg:hidden translate-x-full transition-all duration-300 ease-in-out', ${menuToggle ? 'translate-x-0 transition-0 duration-300 ease-in-out' : 'translate-x-full'} `}>
+      <div className={`fixed inset-0 lg:hidden translate-x-full transition-all duration-300 ease-in-out' ${menuToggle ? 'translate-x-0 transition-0 duration-300 ease-in-out' : 'translate-x-full'} `}>
         <div className='text-[#1e1e20] absolute top-0 right-0 h-screen w-full p-4 gap-8 z-100 bg-[#1e1e20]'>
           <div 
             onClick={handleMenu}
@@ -39,7 +39,7 @@ export default function Menu({ handleMenu, menuToggle, navStyle }: menuProps) {
             <h3 className='text-white font-light'>KontenStore</h3>
             <X className='w-12 h-12 easy-in-out duration-300 hover:scale-110 text-white'/>
           </div>
-          <ul className='flex flex-col items-center gap-10 text-w h-full'>
+          <ul className='flex flex-col items-center gap-10 h-full'>
             {menu.map((item, index) => (
               <li 
                 key={index}
