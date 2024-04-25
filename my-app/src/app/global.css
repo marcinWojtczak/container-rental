@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --fs-h1: clamp(82px, 6vw + 1rem, 109.66px);
+  --fs-h2: clamp(51px, 4vw + 0.5rem, 67.77px);
+  --fs-h3: clamp(31px, 3vw + 0.5rem, 41.89px);
+  --fs-h4: clamp(25px, 3vw + 0.5rem, 33px);
+  --fs-h5: clamp(19px, 1.5vw + 0.5rem, 25.89px);
+  --fs-p: clamp(14px, 1.5vw + 0.25rem, 16px);
+  --fs-h6: clamp(12px, 1.5vw + 0.5rem, 14px);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  line-height: 100%;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  line-height: 110%;
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+h4 {
+  font-size: var(--fs-h4);
+}
+
+h5 {
+  font-size: var(--fs-h5);
+}
+
+h6 {
+  font-size: var(--fs-h6);
+}
+
+a, p {
+  font-size: var(--fs-p);
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --fs-h1: 57px;
+    --fs-h2: 38px;
+    --fs-h3: 23px;
+    --fs-h5: 16px;
+    --fs-h6: 14px;
+    --fs-text: 14px;
+  }
+
+  h1 {
+    font-size: var(--fs-h1);
+  }
+
+  h2 {
+    font-size: var(--fs-h2);
+  }
+
+  h3 {
+    font-size: var(--fs-h3);
+  }
+
+
+  h5 {
+    font-size: var(--fs-h5);
+  }
+
+  h6 {
+    font-size: var(--fs-h6);
+  }
+
+  a, p {
+    font-size: var(--fs-text);
+  }
+}
+
