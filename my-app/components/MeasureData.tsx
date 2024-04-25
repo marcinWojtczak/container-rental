@@ -28,6 +28,7 @@ export default function measureData() {
             alt='conatiner image'
             src={image5}
             fill
+            sizes="100vw"
             style={{ objectFit: "cover"}}
             quality={100}
             className='w-[70%] rounded-l-2xl'

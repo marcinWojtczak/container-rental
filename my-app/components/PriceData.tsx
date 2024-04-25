@@ -29,6 +29,7 @@ export default function PriceData() {
             alt='conatiner image'
             src={image2}
             fill
+            sizes="100vw"
             style={{ objectFit: "cover"}}
             quality={100}
             className='w-[70%] rounded-l-2xl'

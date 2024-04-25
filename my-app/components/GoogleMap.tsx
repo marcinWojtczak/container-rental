@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { GoogleMap, useJsApiLoader, Marker, } from '@react-google-maps/api'
+import { GoogleMap, useJsApiLoader, Marker,  } from '@react-google-maps/api'
 import Link from "next/link"
 import { IoArrowForwardCircle } from 'react-icons/io5'
 import { motion } from "framer-motion"
@@ -11,7 +11,7 @@ export default function Map() {
         id: 'google-map-script',
         googleMapsApiKey: "AIzaSyBlfxEV3b4mczdnUmvZLK8mXsPxbEXHr7E"
     })
-
+    
     const coordinates = { lat: 52.17259, lng: 20.84684 }
     const url = `https://www.google.com/maps?q=${coordinates.lat},${coordinates.lng}&z=13&t=m&hl=en&gl=US&mapclient=apiv3`
  

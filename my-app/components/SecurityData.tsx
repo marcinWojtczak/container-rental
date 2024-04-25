@@ -28,6 +28,7 @@ export default function SecurityData() {
             alt='conatiner image'
             src={image4}
             fill
+            sizes="100vw"
             style={{ objectFit: "cover"}}
             quality={100}
             className='w-[70%] rounded-l-2xl'

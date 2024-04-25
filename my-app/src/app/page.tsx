@@ -21,6 +21,7 @@ export default function Home() {
             src={containerImage}
             alt='container image'
             fill
+            sizes="(min-width: 780px) calc(100vw - 96px), calc(100vw - 32px)"
             style={{ objectFit: "cover"}}
             quality={100}
             className='rounded-lg opacity-50 blur-sm'

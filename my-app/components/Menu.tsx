@@ -11,7 +11,6 @@ interface menuProps {
 }
 
 
-
 const menu = [
   { 
     text: "Oferta",
@@ -31,7 +30,7 @@ const menu = [
 export default function Menu({ handleMenu, menuToggle, navStyle }: menuProps) {
   return (
     <>
-      <div className={`fixed inset-0 lg:hidden translate-x-full transition-all duration-300 ease-in-out', ${menuToggle ? '-translate-x-0 transition-0 duration-300 ease-in-out' : 'translate-x-full'} `}>
+      <div className={`fixed inset-0 lg:hidden translate-x-full transition-all duration-300 ease-in-out', ${menuToggle ? 'translate-x-0 transition-0 duration-300 ease-in-out' : 'translate-x-full'} `}>
         <div className='text-[#1e1e20] absolute top-0 right-0 h-screen w-full p-4 gap-8 z-100 bg-[#1e1e20]'>
           <div 
             onClick={handleMenu}

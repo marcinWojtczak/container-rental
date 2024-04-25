@@ -82,21 +82,22 @@ export default function Slider() {
           {images.map((image, index) => (
             <SwiperSlide key={index}>
               {!showModal ? (
-                <div className='h-[450px] ' onClick={() => handleClickThumbnail(index)}>
+                <div className='h-[450px] relative' onClick={() => handleClickThumbnail(index)}>
                 <Image  
                   src={image.src}
                   alt={image.alt}
                   fill
+                  sizes="100vw"
                   style={{ objectFit: "cover"}}
                   className='rounded-2xl'
                 />
               </div>
               ) : (
-                <div className='hidden h-80 my-10' onClick={() => handleClickThumbnail(index)}>
+                <div className='hidden h-80 my-10 relative' onClick={() => handleClickThumbnail(index)}>
                 <Image  
                   src={image.src}
                   alt={image.alt}
-                  sizes=""
+                  sizes="100vw"
                   fill
                   style={{ objectFit: "cover"}}
                   className='rounded-2xl'
@@ -106,10 +107,10 @@ export default function Slider() {
 
             </SwiperSlide>
           ))}
-          <div className='absolute bottom-[50%] left-[10px] z-20 button-next hover:transition-all ease-in-out hover:scale-110'>
+          <div className='hidden md:block absolute bottom-[50%] left-[10px] z-20 button-next hover:transition-all ease-in-out hover:scale-110'>
             <IoArrowBackCircleOutline className='h-14 w-14 text-white rounded-full' strokeWidth={3} />
           </div> 
-          <div className='absolute bottom-[50%] right-[10px] z-20  rounded-full button-prev hover:transition-all ease-in-out hover:scale-110'>
+          <div className='hidden md:block absolute bottom-[50%] right-[10px] z-20  rounded-full button-prev hover:transition-all ease-in-out hover:scale-110'>
             <IoArrowForwardCircleOutline className='h-14 w-14 text-white rounded-full' strokeWidth={3}/>
           </div>
         </Swiper>
