@@ -13,8 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={poppins.className} >
-      <body className="flex flex-col items-center justify-center bg-white" style={{ scrollBehavior: 'smooth' }}>{children}</body>
+    <html lang="en" className={poppins.className} style={{ scrollBehavior: 'smooth' }}>
+      <body className="flex flex-col items-center justify-center bg-white">{children}</body>
     </html>
   );
 }

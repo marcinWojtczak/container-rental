@@ -24,7 +24,7 @@ export default function Main() {
   
   return (
     <motion.div 
-      className='max-w-[950px] px-2 md:px-24 absolute z-10'  
+      className='max-w-[950px] px-4 md:px-24 absolute z-10'  
       initial={{ opacity: 0, scale: 0}}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
