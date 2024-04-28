@@ -2,15 +2,14 @@
 import React from 'react'
 import CardsData from '@/components/CardsData'
 import { motion } from 'framer-motion'
-
+import {  IoDocumentTextOutline } from 'react-icons/io5'
 
 export default function Content() {
  
   return (
-    <div className='flex flex-col items-center text-center md:py-20 bg-slate-100' id="offer">
+    <div className='flex w-screen flex-col items-center text-center py-10 md:py-20 bg-slate-100' id="offer">
       <motion.div 
-        
-         initial={{ opacity: 0, y: "100%"}}
+         initial={{ opacity: 0, y: 100}}
          transition={{
            duration: 0.5,
            delay: 0.1
@@ -25,7 +24,7 @@ export default function Content() {
         <p className='text-[#1e1e20]'>Oferujemy wynajem elastycznych i bezpiecznych magazynów zrobionych z kontenerów dla firm i osób prywatnych. Zapewniamy korzystne ceny na przechowywanie Twoich towarów i przedmiotów.</p>
       </motion.div>
       <motion.div 
-        initial={{ x: '100%', opacity: 0 }}
+        initial={{ x: '-100%', opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{
           type: "tween",
@@ -35,8 +34,16 @@ export default function Content() {
         viewport={{
           once: true
         }}
-        className='flex items-center xl:items-end gap-12 justify-center w-full'>
+        className='flex flex-col gap-12 items-center w-full'>
         <CardsData />
+        <a
+              href="/UmowaNajmu.pdf" 
+              download
+              className="w-fit flex items-center gap-4 px-12 py-2 bg-[#1e1e20] rounded-full text-[#e83622] transition-color ease-in-out duration-300 hover:scale-105 hover:shadow-2xl shadow-[#1e1e20] hover:text-[#1e1e20] hover:bg-opacity-0 border border-[#1e1e20] hover:border hover:border-[#1e1e20]"
+            >
+                <p className='font-semibold'>Pobierz Umowę</p>
+                <IoDocumentTextOutline className='w-12 h-12'/>
+          </a>
       </motion.div>
     </div>
   ) 

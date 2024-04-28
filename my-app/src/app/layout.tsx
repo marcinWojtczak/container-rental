@@ -9,24 +9,16 @@ const poppins = Poppins({
 
 export default function RootLayout({
   children,
-  gallery
 }: Readonly<{
   children: React.ReactNode;
-  gallery: React.ReactNode
 }>) {
-
-
-  console.log(gallery)
   return (
     <html 
       lang="en" 
       className={poppins.className} 
-      style={{ scrollBehavior: 'smooth', overflowX: 'hidden'}}
+      style={{ scrollBehavior: 'smooth'}}
     >
-      <body className="flex flex-col items-center justify-center bg-white">
-        {children}
-        {gallery}
-      </body>
+      <body className="flex w-screen flex-col items-center justify-center bg-white">{children}</body>
     </html>
   );
 }

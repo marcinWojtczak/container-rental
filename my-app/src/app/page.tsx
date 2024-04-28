@@ -19,7 +19,7 @@ export default function Home() {
           </div>
         </div>      
       </div>
-      <div className='w-full flex flex-col'>
+      <div className='w-screen flex flex-col'>
         <Content />
         <Gallery />
         <div className='relative'>
@@ -28,7 +28,7 @@ export default function Home() {
               <GoogleMap />
           </div>
         </div>
-        </div>
+      </div>
       <Footer />
     </div>
   )

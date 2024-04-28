@@ -61,16 +61,15 @@ export default function Map() {
          
         </motion.div>
         <motion.div 
-          initial={{ x: '100%', opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ opacity: 0, y: 100}}
           transition={{
-            type: "tween",
             duration: 0.5,
             delay: 0.1
           }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{
-            once: true
-          }}
+           once: true
+         }}
           className='relative h-full w-full px-3 md:px-8'>
           <GoogleMap
             mapContainerStyle={{  width: '100%', height: '500px' }}

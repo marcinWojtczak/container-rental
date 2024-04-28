@@ -14,8 +14,8 @@ interface ModalProps {
 export default function Modal({setShowModal}: ModalProps) {
 
     return (
-        <div className="fixed inset-0 flex items-center justify-center bg-[#1e1e20]  opacity-95 z-100">
-            <div className="w-full md:w-[70vw] lg:w-[60vw] h-[60vh] p-10 relative z-100">
+        <div className="fixed inset-0 w-full flex items-center justify-center bg-[#1e1e20] opacity-95 z-50">
+            <div className="w-[100%] md:w-[70%] h-[70%] md:p-10 relative z-100">
                 <Swiper
                     spaceBetween={10}
                     navigation={{
@@ -32,7 +32,7 @@ export default function Modal({setShowModal}: ModalProps) {
                             <Image 
                             src={image.src}
                             alt={image.alt}
-                            sizes="100vw"
+                            sizes="calc(50vw - 20px)"
                             fill
                             style={{ objectFit: "cover"}}
                             className="h-full w-full z-100"
@@ -42,13 +42,13 @@ export default function Modal({setShowModal}: ModalProps) {
                     </div>
                 </Swiper>
                 <div>
-                    <div className='button-next absolute top-[50%] left-[-50px] z-10 bg-white bg-opacity-10 hover:transition-all ease-in-out hover:scale-110'>
+                    <div className='button-next absolute top-[50%] left-[-70px] z-10 bg-white bg-opacity-10 hover:transition-all ease-in-out hover:scale-110'>
                         <IoArrowBackCircleOutline className='h-14 w-14 text-white z-20' strokeWidth={3} />
                     </div>
-                    <div className='button-next absolute top-[50%] right-[-50px] z-10 bg-white bg-opacity-10 hover:transition-all ease-in-out hover:scale-110'>
+                    <div className='button-next absolute top-[50%] right-[-70px] z-10 bg-white bg-opacity-10 hover:transition-all ease-in-out hover:scale-110'>
                         <IoArrowForwardCircleOutline className='h-14 w-14 text-white  z-20' strokeWidth={3}/>
                     </div>
-                    <button className="absolute p-2 top-[-25px] right-[40px] z-10 bg-white bg-opacity-10 hover:transition-all ease-in-out hover:scale-110" onClick={() => setShowModal(prevState => !prevState)}>
+                    <button className="absolute p-2 top-[-70px] right-[40px] z-10 bg-white bg-opacity-10 hover:transition-all ease-in-out hover:scale-110" onClick={() => setShowModal(false)}>
                         <AiOutlineClose className="w-10 h-10 text-white "/>
                     </button>
                 </div>
