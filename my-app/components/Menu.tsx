@@ -32,7 +32,7 @@ export default function Menu({ setMenuToggle, menuToggle, navStyle }: menuProps)
   return (
     <>
         <div 
-          className={`text-[#1e1e20] absolute h-screen w-full p-4 gap-8 z-100 bg-[#1e1e20] top-0  ${menuToggle ? 'right-[-10000px]' : 'right-0'} tranistion-all duration-500 ease-in-out`}>
+          className={`text-[#1e1e20] absolute h-screen w-full p-4 gap-8 z-50 bg-[#1e1e20] top-0  ${menuToggle ? 'right-[-10000px]' : 'right-0'} tranistion-all duration-500 ease-in-out`}>
           <div 
             className='flex justify-between items-center'
           >
@@ -68,17 +68,18 @@ export default function Menu({ setMenuToggle, menuToggle, navStyle }: menuProps)
               >
                 <Link
                   href={item.link}
-                  className={` ${navStyle ? ' font-normal tracking-wider hover:font-medium ' : 'text-[#1e1e20]  hover:font-medium'}`}
+                  className={` hover:text-[#e83622]  ${navStyle ? 'tracking-wider hover:font-medium font-semibold ' : 'text-white font-semibold tracking-wider  hover:font-medium'}`}
                 >
-                  {item.text}
+                  <p>{item.text}</p>
                 </Link>
               </li>
             ))}
-            <Link href="#contact" className='hidden md:block'>
-                <button className=" flex items-center gap-4 pl-6 bg-[#e83622] rounded-full text-white transition-color ease-in-out duration-300 hover:scale-105 hover:shadow-2xl shadow-[#1e1e20] hover:text-[#e83622] hover:bg-opacity-0 border hover:border-[#e83622] hover:bg-white">
-                  <p>Kontakt</p>
-                <IoArrowForwardCircle className='w-12 h-12 hover:text-[#1e1e20] -rotate-45'/>
-              </button>
+            <Link 
+              href="#contact" 
+              className={`flex items-center gap-4 pl-6 border rounded-full font-semibold ${!navStyle ? ' border-white text-white transition-color ease-in-out duration-300 hover:scale-105 hover:shadow-2xl shadow-[#1e1e20] hover:text-white hover:bg-[#e83622] hover:border-[#e83622]' : 'border-[#e83622] text-[#e83622] transition-color ease-in-out duration-300 hover:scale-105 hover:shadow-2xl shadow-[#e83622] hover:text-white hover:bg-[#e83622] hover:border-[#e83622]' } `}>
+                <p>Kontakt</p>
+                <IoArrowForwardCircle className='w-12 h-12 -rotate-45'/>
+             
             </Link>
         </ul>  
       </div>

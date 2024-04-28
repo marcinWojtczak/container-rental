@@ -1,6 +1,7 @@
 'use client'
 import { FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion'
+import { isMobile } from 'react-device-detect';
 
 export default function Footer() {
   return (
@@ -8,34 +9,47 @@ export default function Footer() {
       <div className='flex flex-col md:flex-row gap-8 items-center md:justify-between w-full border-b border-[#1e1e20] mb-5'>
         <motion.h4
           initial={{ x: '-100%', opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
           transition={{
             type: "tween",
-            duration: 0.7,
+            duration: 0.5,
             delay: 0.1
+          }}
+          viewport={{
+            once: true
           }}
         >
           KontenStore
         </motion.h4>
         <motion.div 
            initial={{ x: '100%', opacity: 0 }}
-           animate={{ x: 0, opacity: 1 }}
+           whileInView={{ x: 0, opacity: 1 }}
            transition={{
              type: "tween",
-             duration: 0.7,
+             duration: 0.5,
              delay: 0.1
+           }}
+           viewport={{
+             once: true
            }}
           className='flex flex-col gap-10'
         >
           <div>
             <p className='mb-2 font-semibold'>Kontakt:</p>
-            <div className='flex items-center gap-4 md:ml-10'>
+            {/* <div className='flex items-center gap-4 md:ml-10'>
               <FaPhoneAlt className='w-5 h-5 text-[#e83622]'/>
-              <div>
-                <p>531 787 144,</p>
-                <p>502 186 636</p>        
-              </div>
-            </div>
+              {isMobile ? (
+                <div>
+                  <p><a href="531 787 144">531 787 144</a></p>
+                  <p><a href="502 186 636">502 186 636</a></p> 
+                </div>
+              ) : (
+                <div>
+                    <p>531 787 144</p>
+                    <p>502 186 636</p>
+                </div>
+              )}
+            </div> */}
           </div>
           <div className='mb-10 md:mb-20'>
             <p className='mb-2 font-semibold'>Adres:</p>

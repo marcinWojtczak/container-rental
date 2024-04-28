@@ -33,45 +33,49 @@ export default function Map() {
     }
     
     return (
-      <div className='flex flex-col bg-[#1e1e20] pb-20 md:pb-40 md:pt-20' id="map">
+      <div className='flex flex-col items-center text-center md:pt-20 pb-20 md:pb-40' id="map">
         <motion.div
-          initial={{ x: '100%', opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          initial={{ opacity: 0, y: 100}}
           transition={{
-            type: "tween",
-            duration: 0.7,
+            duration: 0.5,
             delay: 0.1
           }}
-          className='flex flex-col my-20 gap-10 max-w-[950px] px-4 md:px-24'
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{
+            once: true
+          }}
+          className='flex flex-col items-center px-3 md:px-8 my-14 md:my-20 max-w-[850px] z-10'
         >
-          <h2 className="text-white font-semibold">Dojazd</h2>
-          <div className='md:ml-28'>
-            <p className='text-white mb-6'>Nasze magazyny znajdują się w doskonałej lokalizacji, co zapewnia łatwy dostęp i efektywną logistykę dla naszych klientów. Zapraszamy do    odwiedzenia nas pod adresem:<label className='font-black'>Aleje Jrozlolimksie 337a.</label> Znajdź nas i przekonaj się, że nasza lokalizacja spełni wszystkie Twoje oczekiwania!
+          <h2 className="text-white font-semibold mb-6 border-b-2 w-fit border-[#e83622]">Dojazd</h2>
+          
+            <p className='text-white mb-6 '>Nasze magazyny znajdują się w doskonałej lokalizacji, co zapewnia łatwy dostęp i efektywną logistykę dla naszych klientów. Zapraszamy do    odwiedzenia nas pod adresem:<label className='font-black'>Aleje Jrozlolimksie 337a.</label> Znajdź nas i przekonaj się, że nasza lokalizacja spełni wszystkie Twoje oczekiwania!
             </p>
             <Link 
               href={url}
               target='_blank'
+              className="flex items-center gap-4 pl-6 bg-[#e83622] rounded-full text-white transition-color ease-in-out duration-300 hover:scale-105 hover:shadow-2xl shadow-[#1e1e20] hover:text-white hover:bg-opacity-0 border border-[#e83622]  hover:border-white"
             >
-              <button className="flex items-center gap-4 pl-6 bg-[#e83622] rounded-full text-white transition-color ease-in-out duration-300 hover:scale-105 hover:shadow-2xl shadow-[#1e1e20] hover:text-white border border-[#e83622] hover:bg-opacity-0 hover:border hover:border-white">
-                <p>Sprawdź dojazd</p>
-                <IoArrowForwardCircle className='w-12 h-12 hover:text-white -rotate-45'/>
-              </button>
+              <p>Sprawdź dojazd</p>
+              <IoArrowForwardCircle className='w-12 h-12 hover:text-white -rotate-45'/>
             </Link>
-          </div>
+         
         </motion.div>
         <motion.div 
           initial={{ x: '100%', opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
           transition={{
             type: "tween",
-            duration: 0.7,
+            duration: 0.5,
             delay: 0.1
           }}
-          className='relative h-full w-full px-8 md:px-24'>
+          viewport={{
+            once: true
+          }}
+          className='relative h-full w-full px-3 md:px-8'>
           <GoogleMap
-            mapContainerStyle={{  width: '100%', height: '450px', borderRadius: '16px' }}
+            mapContainerStyle={{  width: '100%', height: '500px' }}
             center={center}
-            zoom={13}
+            zoom={12}
           >
             <Link 
               href={url}
@@ -79,7 +83,6 @@ export default function Map() {
             >
               <Marker position={{lat: coordinates.lat,  lng: coordinates.lng}} onClick={handleClick}/> 
             </Link>
-          \          
           </GoogleMap>
         </motion.div>
       </div>

@@ -14,8 +14,8 @@ interface ModalProps {
 export default function Modal({setShowModal}: ModalProps) {
 
     return (
-        <div className="fixed inset-0 flex items-center justify-center bg-[#1e1e20] z-10 opacity-95">
-            <div className="w-full md:w-[70vw] lg:w-[60vw] h-[60vh] p-10 relative">
+        <div className="fixed inset-0 flex items-center justify-center bg-[#1e1e20]  opacity-95 z-100">
+            <div className="w-full md:w-[70vw] lg:w-[60vw] h-[60vh] p-10 relative z-100">
                 <Swiper
                     spaceBetween={10}
                     navigation={{
@@ -23,7 +23,7 @@ export default function Modal({setShowModal}: ModalProps) {
                     prevEl:'.button-prev',
                     }}
                     modules={[FreeMode, Navigation]}
-                    className="h-full w-full"
+                    className="h-full w-full z-100"
                     loop={true}
                 >
                     <div className='relative my-10 '>
@@ -35,6 +35,7 @@ export default function Modal({setShowModal}: ModalProps) {
                             sizes="100vw"
                             fill
                             style={{ objectFit: "cover"}}
+                            className="h-full w-full z-100"
                             />
                         </SwiperSlide>
                     ))}

@@ -23,7 +23,7 @@ export default function Slider() {
       let width = window.innerWidth
       if (width >= 1200) {
         setSlidesPerView(3)
-      } else if (width >= 1020) {
+      } else if (width >= 768) {
         setSlidesPerView(2)
       } else {
         setSlidesPerView(1)
@@ -89,7 +89,6 @@ export default function Slider() {
                   fill
                   sizes="100vw"
                   style={{ objectFit: "cover"}}
-                  className='md:rounded-2xl'
                 />
               </div>
               ) : (
@@ -100,7 +99,6 @@ export default function Slider() {
                   sizes="100vw"
                   fill
                   style={{ objectFit: "cover"}}
-                  className='md:rounded-2xl'
                 />
               </div>
               )}

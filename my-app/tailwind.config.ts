@@ -7,6 +7,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    extend: {
+      backgroundImage: {
+        'parallax': 'url("/kontener4.jpeg")'
+      }
+    },
     screens: {
       'xs': '480px',
       'sm': '640px',
@@ -16,4 +21,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+} 
