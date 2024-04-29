@@ -2,7 +2,13 @@ import React from 'react'
 import { X } from 'lucide-react';
 import {  IoArrowForwardCircle } from 'react-icons/io5'
 import Link from "next/link"
+import { Monoton } from 'next/font/google'
 
+const monoton = Monoton({
+  weight: [ '400'],
+  subsets: ['latin'],
+  variable: '--font-monoton'
+})
 
 interface menuProps {
   menuToggle: boolean,
@@ -36,7 +42,7 @@ export default function Menu({ setMenuToggle, menuToggle, navStyle }: menuProps)
           <div 
             className='flex justify-between items-center'
           >
-            <h3 className='text-white font-light'>KontenStore</h3>
+            <h3 className={`${monoton.variable} text-white font-monoton`}>KontenStore</h3>
             <X 
               onClick={() => setMenuToggle(!menuToggle)}
               className='w-12 h-12 easy-in-out duration-300 hover:scale-110 text-white'
@@ -48,7 +54,9 @@ export default function Menu({ setMenuToggle, menuToggle, navStyle }: menuProps)
                 key={index}
                 className='flex items-center'
               >
-                <h4><Link href={item.link} className='text-white lg:font-semibold easy-out duration-300  transition-transform hover:scale-125'>{item.text}</Link></h4>
+                <Link href={item.link} className='text-white font-medium lg:font-semibold easy-out duration-300  transition-transform hover:scale-125'>
+                  <h4>{item.text}</h4>
+                </Link>
               </li>
             ))}
           </ul>  

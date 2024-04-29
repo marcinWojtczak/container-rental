@@ -21,7 +21,7 @@ export default function Map() {
     };
 
     if (loadError) {
-      return <div className="text-[20px] font-semibold px-24 py-8">Error loading map...</div>;
+      return <div className="text-[20px] font-semibold px-24 py-8">Something Went Wrong</div>;
     }
   
     if (!isLoaded) {
@@ -48,7 +48,7 @@ export default function Map() {
         >
           <h2 className="text-white font-semibold mb-6 border-b-2 w-fit border-[#e83622]">Dojazd</h2>
           
-            <p className='text-white mb-6 '>Nasze magazyny znajdują się w doskonałej lokalizacji, co zapewnia łatwy dostęp i efektywną logistykę dla naszych klientów. Zapraszamy do    odwiedzenia nas pod adresem:<label className='font-black'>Aleje Jrozlolimksie 337a.</label> Znajdź nas i przekonaj się, że nasza lokalizacja spełni wszystkie Twoje oczekiwania!
+            <p className='text-white mb-6 '>Nasze magazyny znajdują się w doskonałej lokalizacji, co zapewnia łatwy dostęp i efektywną logistykę dla naszych klientów. Zapraszamy do odwiedzenia nas pod adresem:<label className='font-bold text-[#e83622]'> Aleje Jrozlolimksie 337a 05-816 Reguły</label> Znajdź nas i przekonaj się, że nasza lokalizacja spełni wszystkie Twoje oczekiwania!
             </p>
             <Link 
               href={url}
@@ -74,7 +74,7 @@ export default function Map() {
           <GoogleMap
             mapContainerStyle={{  width: '100%', height: '500px' }}
             center={center}
-            zoom={12}
+            zoom={11}
           >
             <Link 
               href={url}

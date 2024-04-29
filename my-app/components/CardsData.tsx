@@ -1,10 +1,8 @@
 import React from 'react'
-import Image from "next/image"
-import image2 from "@/public/kontener2.jpeg"
 import { MdOutlineAttachMoney } from "react-icons/md";
-import { FaCircleCheck } from 'react-icons/fa6';
 import { MdOutlineSecurity } from "react-icons/md";
 import { GoContainer } from "react-icons/go";
+
 
 const cardDatas = [
     {

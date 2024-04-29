@@ -1,14 +1,10 @@
 'use client'
-import React, { useEffect, useState, ReactNode } from 'react'
-import { motion,   } from 'framer-motion'
+import React, { useEffect, useState } from 'react'
 import Slider from '@/components/Slider'
-import image1 from '@/public/kontener4.jpeg'
-import image2 from '@/public/kontener3.jpeg'
-import image3 from '@/public/kontener2.jpeg'
-import image4 from '@/public/magazyn-lrg.jpg'
 import Image from "next/image"
 import Modal from './Modal'
 import { images } from '@/lib/images'
+import { MotionDiv } from '@/components/MotionTag'
 
 
 export default function Gallery() {
@@ -56,7 +52,7 @@ export default function Gallery() {
   return (
     <>
       <div className='flex flex-col items-center text-center md:pt-20 pb-20 md:pb-40' id="gallery">
-        <motion.div 
+        <MotionDiv 
            initial={{ opacity: 0, y: 100}}
            transition={{ duration: 0.5, delay: 0.1}}
            whileInView={{ opacity: 1, y: 0 }}
@@ -65,8 +61,8 @@ export default function Gallery() {
         >
           <h2 className='text-[#1e1e20] font-semibold mb-6 border-b-2 w-fit border-[#e83622]'>Galeria</h2>
           <p className='text-[#1e1e20]'>Przestronne i bezpieczne magazyn w kontenerze morskim - idealne rozwiązanie dla Twoich potrzeb przechowywania.</p>
-        </motion.div>
-        <motion.div
+        </MotionDiv>
+        <MotionDiv
           initial={{ x: '-100%', opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ type: "tween", duration: 0.5, delay: 0.1 }}
@@ -98,7 +94,7 @@ export default function Gallery() {
           ) : (
             <Slider />
           )}
-        </motion.div>
+        </MotionDiv>
       </div>
   </>
   )

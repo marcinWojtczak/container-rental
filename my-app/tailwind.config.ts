@@ -19,6 +19,9 @@ module.exports = {
       'lg': '1154px', 
       'xl': '1380px', 
     },
+    fontFamily: {
+      monoton: ['var(--font-monoton)'],
+    }
   },
   plugins: [],
 } 

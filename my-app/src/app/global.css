@@ -46,8 +46,8 @@ a, p {
 
 @media (max-width: 768px) {
   :root {
-    --fs-h1: 51px;
-    --fs-h2: 35px;
+    --fs-h1: 45px;
+    --fs-h2: 31px;
     --fs-h3: 21px;
     --fs-h5: 16px;
     --fs-h6: 14px;

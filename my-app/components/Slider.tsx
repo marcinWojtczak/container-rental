@@ -1,15 +1,14 @@
 'use client'
 import React, { useState, useEffect } from 'react'
+import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from 'react-icons/io5'
 import { Swiper, SwiperSlide} from 'swiper/react';
-import { Navigation, FreeMode, Pagination } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import { images } from '@/lib/images' 
 import Image from 'next/image';
 import Modal from '@/components/Modal';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from 'react-icons/io5'
-
 
 
 export default function Slider() {

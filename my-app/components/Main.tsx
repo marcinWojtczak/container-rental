@@ -38,7 +38,7 @@ export default function Main() {
     >
       <h1 className='font-bold text-white mb-4'>Wynajme<br/><label className='text-[#e83622]'>Magazynów</label><br/><label>Warszawa</label></h1>
       <div>
-        <p className='mb-6 text-white'>Wynajem magazynów dla firm i osób prywatnych w korzystnej cenie – oferujemy elastyczne i bezpieczne rozwiązania przechowywania, które spełnią oczekiwania zarówno biznesów, jak i indywidualnych klientów. 
+        <p className='mb-6 text-white'>Wynajem magazynów dla firm i osób prywatnych w korzystnej cenie, które spełnią oczekiwania zarówno biznesów, jak i indywidualnych klientów. 
         </p>
         <div className='flex flex-col md:flex-row gap-4'>
           <Link 
@@ -59,7 +59,7 @@ export default function Main() {
       </div>
       <Link 
         href='/' 
-        className={`${position ? "fixed" : "hidden"} -rotate-90 left-[-20px] z-40 w-fit flex items-center gap-4 pl-6 bg-[#e83622] rounded-full text-white transition-color ease-in-out duration-300 hover:scale-105 hover:shadow-2xl shadow-[#1e1e20] hover:text-[#e83622] hover:bg-opacity-0 border border-[#e83622] hover:border hover:border-[#e83622]`}>
+        className={`${position ? "fixed" : "hidden"} hidden md:fixed -rotate-90 left-[-20px] z-40 w-fit md:flex items-center gap-4 pl-6 bg-[#e83622] rounded-full text-white transition-color ease-in-out duration-300 hover:scale-105 hover:shadow-2xl shadow-[#1e1e20] hover:text-[#e83622] hover:bg-opacity-0 border border-[#e83622] hover:border hover:border-[#e83622]`}>
         <p>Home</p>
         <IoArrowForwardCircle className='w-12 h-12 hover:text-white'/>
       </Link>
