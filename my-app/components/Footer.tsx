@@ -1,5 +1,5 @@
 import { FaMapMarkerAlt } from 'react-icons/fa';
-import { MotionH4 } from '@/components/MotionTag'
+import { MotionH4 } from '@/components/MotionDiv'
 import React from 'react'
 import { isMobile } from 'react-device-detect';
 import { FaPhoneAlt } from 'react-icons/fa';

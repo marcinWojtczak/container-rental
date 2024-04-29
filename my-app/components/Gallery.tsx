@@ -4,7 +4,7 @@ import Slider from '@/components/Slider'
 import Image from "next/image"
 import Modal from './Modal'
 import { images } from '@/lib/images'
-import { MotionDiv } from '@/components/MotionTag'
+import { MotionDiv } from '@/components/MotionDiv'
 
 
 export default function Gallery() {

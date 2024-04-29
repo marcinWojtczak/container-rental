@@ -1,7 +1,7 @@
 import React from 'react'
 import CardsData from '@/components/CardsData'
 import {  IoDocumentTextOutline } from 'react-icons/io5'
-import { MotionDiv } from '@/components/MotionTag'
+import { MotionDiv } from '@/components/MotionDiv'
 
 export default function Content() {
  
