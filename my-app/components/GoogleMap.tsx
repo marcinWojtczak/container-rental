@@ -9,7 +9,7 @@ import { motion } from "framer-motion"
 export default function Map() {
     const { isLoaded, loadError } = useJsApiLoader({
         id: 'google-map-script',
-        googleMapsApiKey: process.env.GOOGLE_MAP_KEY!
+        googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAP_KEY!
     })
     
     const coordinates = { lat: 52.17259, lng: 20.84684 }
