@@ -36,7 +36,7 @@ export default function Main() {
         once: true
       }}
     >
-      <h1 className='font-bold text-white mb-4'>Wynajme<br/><label className='text-[#e83622]'>Magazynów</label><br/><label>Warszawa</label></h1>
+      <h1 className='font-bold text-white mb-4'>Wynajem<br/><label className='text-[#e83622]'>Magazynów</label><br/><label>Warszawa</label></h1>
       <div>
         <p className='mb-6 text-white pr-4'>Wynajem magazynów dla firm i osób prywatnych w korzystnej cenie, które spełnią oczekiwania zarówno biznesów, jak i indywidualnych klientów. 
         </p>

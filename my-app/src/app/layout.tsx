@@ -15,6 +15,12 @@ const monoton = Monoton({
 })
 
 
+export const metadata: Metadata = {
+  title: "Magazyny samoobsługowe Warszawa. Zdobądź więcej miejsca już teraz!",
+  description: "Samoobsługowe magazyny: Warszawa i okolice. Doskonała lokalizacja zapewnia łatwy dostęp i wygodę dla Twoich potrzeb magazynowych."
+}
+
+
 export default function RootLayout({
   children,
 }: Readonly<{

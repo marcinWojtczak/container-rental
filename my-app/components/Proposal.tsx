@@ -1,9 +1,10 @@
 import React from 'react'
 import CardsData from '@/components/CardsData'
-import {  IoDocumentTextOutline } from 'react-icons/io5'
+import { IoDocumentTextOutline } from 'react-icons/io5'
 import { MotionDiv } from '@/components/MotionDiv'
 
-export default function Content() {
+
+export default function Proposal() {
  
   return (
     <div className='flex w-screen flex-col items-center text-center py-10 md:py-20 bg-slate-100' id="offer">
@@ -19,8 +20,8 @@ export default function Content() {
         }}
         className='max-w-[450px] md:max-w-[850px] text-center px-3 md:px-8 my-14 md:my-20 flex flex-col items-center'
       >
-        <h2 className='text-[#1e1e20] font-semibold mb-6 border-b-2 w-fit  border-[#e83622]'>Oferta</h2>
-        <p className='text-[#1e1e20]'>Oferujemy wynajem elastycznych i bezpiecznych magazynów zrobionych z kontenerów dla firm i osób prywatnych. Zapewniamy korzystne ceny na przechowywanie Twoich towarów i przedmiotów.</p>
+        <h2 className='text-[#1e1e20] font-semibold mb-6 border-b-2 w-fit  border-[#e83622]'>Nasza Oferta</h2>
+        <p className='text-[#1e1e20]'>Oferujemy wynajem elastycznych i bezpiecznych magazynów zrobionych z kontenerów dla firm i osób prywatnych. Gwarantujemy korzystne ceny oraz profesjonalną obsługę, zapewniając Ci spokój i bezpieczeństwo w przechowywaniu Twoich towarów i przedmiotów.</p>
       </MotionDiv>
       <MotionDiv
         initial={{ x: '-100%', opacity: 0 }}

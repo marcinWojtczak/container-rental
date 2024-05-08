@@ -60,7 +60,10 @@ export default function Gallery() {
            className='max-w-[850px] text-center px-3 md:px-8 my-14 md:my-20 flex flex-col items-center'
         >
           <h2 className='text-[#1e1e20] font-semibold mb-6 border-b-2 w-fit border-[#e83622]'>Galeria</h2>
-          <p className='text-[#1e1e20]'>Przestronne i bezpieczne magazyn w kontenerze morskim - idealne rozwiązanie dla Twoich potrzeb przechowywania.</p>
+          <p className='text-[#1e1e20]'>
+            Odkryj nasze nowoczesne magazyny kontenerowe - idealne rozwiązanie dla Twoich potrzeb przechowywania.
+            Połączenie funkcjonalności z estetyką zapewnia bezpieczną przestrzeń dla Twoich przedmiotów.
+          </p>
         </MotionDiv>
         <MotionDiv
           initial={{ x: '-100%', opacity: 0 }}

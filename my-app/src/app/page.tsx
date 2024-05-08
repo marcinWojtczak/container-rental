@@ -1,9 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Main from "@/components/Main";
-import Content from "@/components/Content";
+import Proposal from "@/components/Proposal";
 import GoogleMap from "@/components/GoogleMap";
 import Footer from "@/components/Footer"
 import Gallery from "@/components/Gallery";
+
 
 
 export default function Home() {
@@ -20,7 +21,7 @@ export default function Home() {
         </div>      
       </div>
       <div className='w-screen flex flex-col'>
-        <Content />
+        <Proposal />
         <Gallery />
         <div className='relative'>
           <div className='absolute inset-0 bg-black opacity-70'></div>
